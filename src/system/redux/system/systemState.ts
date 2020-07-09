@@ -5,5 +5,5 @@ export interface ISystemState {
 }
 
 export const SystemInitialState: ISystemState = {
-  language: EListLanguage.ru,
+  language: EListLanguage.en,
 }

@@ -5,10 +5,11 @@ export enum EPlatformName {
 
 export enum EListLanguage {
   ru = 'ru',
+  en = 'en',
 }
 
 export class Pages {
-  static readonly home = 'Home'
+  static readonly login = 'Login'
 }
 
 export const baseUrl = ''

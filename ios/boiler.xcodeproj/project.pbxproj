@@ -20,6 +20,7 @@
 		8C8A8EC1D23A3FFD61B312EE /* libPods-boiler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D62CD6230B08CC37759979 /* libPods-boiler-tvOS.a */; };
 		BFDA70F165EB13D6380AC56B /* libPods-boiler-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CCB6843501F8DA2F4A1258 /* libPods-boiler-tvOSTests.a */; };
 		DC04F903E773C7908A98ED2F /* libPods-boiler-boilerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7430CA48B4F22F2063E51FE9 /* libPods-boiler-boilerTests.a */; };
+		8B75ABC4654A4214829C86A3 /* AvenirNextCyr-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8A819399E2D47FFB6E59F84 /* AvenirNextCyr-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		DF16C057BFD09491A13ACDF2 /* Pods-boiler-boilerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boiler-boilerTests.debug.xcconfig"; path = "Target Support Files/Pods-boiler-boilerTests/Pods-boiler-boilerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		A8A819399E2D47FFB6E59F84 /* AvenirNextCyr-Medium.ttf */ = {isa = PBXFileReference; name = "AvenirNextCyr-Medium.ttf"; path = "../assets/fonts/AvenirNextCyr-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D3457CAD384581823E5070E7 /* Pods */,
+				EC229C36F3B04CCD9F5B62FD /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +200,15 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		EC229C36F3B04CCD9F5B62FD /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				A8A819399E2D47FFB6E59F84 /* AvenirNextCyr-Medium.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -340,6 +352,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				8B75ABC4654A4214829C86A3 /* AvenirNextCyr-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
