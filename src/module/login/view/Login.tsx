@@ -24,13 +24,27 @@ interface IProps {
 }
 
 interface IState {
-
+  telephoneValue: string
+  passwordValue: string
 }
 
 export class Login extends PureComponent<IProps,IState>{
+
+  state = {
+    telephoneValue: '',
+    passwordValue: '',
+  }
+
+  onChangeTelephone = (telephoneValue: string): void => {
+    this.setState({ telephoneValue })
+  }
+  onChangePassword = (passwordValue: string): void => {
+    this.setState({ passwordValue })
+  }
+
   render(): JSX.Element {
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <Image
           source={ImageRepository.loginUnderHeader}
           style={styles.underHeader}
@@ -46,10 +60,16 @@ export class Login extends PureComponent<IProps,IState>{
           <View style={styles.devider} />
           <View style={styles.inputsContainer}>
             <TextInputMask
-              type="cel-phone"
+              type="custom"
+              options={{
+                mask: '+7 (999) 999-99-99'
+              }}
               placeholder={localization.list.loginTelephoneInputPlaceholder}
               placeholderTextColor={Color.gainsboro}
               style={styles.phoneInput}
+              keyboardType="numeric"
+              value={this.state.telephoneValue}
+              onChangeText={this.onChangeTelephone}
             />
             <Image
               style={styles.phone}
@@ -59,10 +79,13 @@ export class Login extends PureComponent<IProps,IState>{
           </View>
           <View style={styles.inputsContainer}>
             <TextInput
+              maxLength={20}
               secureTextEntry
               style={styles.passwordInput}
               placeholder={localization.list.loginPasswordInputPlaceholder}
               placeholderTextColor={Color.gainsboro}
+              value={this.state.passwordValue}
+              onChangeText={this.onChangePassword}
             />
             <Image
               style={styles.lock}
@@ -115,7 +138,6 @@ const styles = styleSheetCreate({
     height: windowWidth * 0.39,
   }),
   wrapper: style.view({
-    flex: 1,
     marginTop: windowWidth * 0.12,
     paddingHorizontal: windowWidth * 0.06,
   }),

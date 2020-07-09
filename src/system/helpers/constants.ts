@@ -10,6 +10,7 @@ export enum EListLanguage {
 
 export class Pages {
   static readonly login = 'Login'
+  static readonly pagination = 'Pagination'
 }
 
-export const baseUrl = ''
+export const baseUrl = 'http://jsonplaceholder.typicode.com/'
