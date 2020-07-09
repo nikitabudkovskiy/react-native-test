@@ -14,7 +14,7 @@ import {
 } from 'app/system/helpers'
 import { IApplicationState, connectStore } from 'app/system/redux'
 import { paginationAsyncAction } from 'app/module/pagination/store'
-import {Loader} from "app/system/view/Loader";
+import { Loader } from 'app/system/view/Loader'
 
 interface IProps {
 }
@@ -91,6 +91,7 @@ export class Pagination extends PureComponent
             numberButtons.map((item: number) => {
               return (
                 <TouchableOpacity
+                  key={item.toString()}
                   onPress={this.onChangeActivePage.bind(this, item)}
                   style={activePage === item ? styles.activeControlButton : styles.controlButton}
                 >

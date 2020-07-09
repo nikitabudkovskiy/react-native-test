@@ -1,14 +1,58 @@
 import React, { PureComponent } from 'react'
-import { View, Text } from 'react-native'
-import { styleSheetCreate, style, } from 'app/system/helpers'
+import { View, Text, TouchableOpacity, } from 'react-native'
+import { styleSheetCreate, style, Color, windowWidth, } from 'app/system/helpers'
+import { StackNavigationProp } from '@react-navigation/stack'
+import { Pages } from 'app/system/helpers'
 
-export class Home extends PureComponent{
+interface IProps {
+  navigation: StackNavigationProp<any>
+}
+
+interface IState {
+
+}
+
+export class Home extends PureComponent<IProps,IState>{
+
+  goToLogin = (): void => {
+    this.props.navigation.push(Pages.login)
+  }
+
+  goToPagination = (): void => {
+    this.props.navigation.push(Pages.pagination)
+  }
+
+  goToFakeTab = (): void => {
+    this.props.navigation.push(Pages.tabFake)
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>
-          Home
-        </Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={this.goToLogin}
+        >
+          <Text>
+            Login
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={this.goToPagination}
+        >
+          <Text>
+            Pagination
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={this.goToFakeTab}
+        >
+          <Text>
+            Fake Tab
+          </Text>
+        </TouchableOpacity>
       </View>
     )
   }
@@ -17,8 +61,17 @@ export class Home extends PureComponent{
 const styles = styleSheetCreate({
   container: style.view({
     flex: 1,
-    backgroundColor: 'red',
+    backgroundColor: Color.platinum,
     alignItems: 'center',
     justifyContent: 'center',
+  }),
+  button: style.view({
+    backgroundColor: Color.mayaBlue,
+    width: windowWidth * 0.8,
+    height: windowWidth * 0.2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: windowWidth * 0.02,
+    marginBottom: windowWidth * 0.05,
   })
 })
